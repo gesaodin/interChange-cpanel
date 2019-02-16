@@ -1,0 +1,40 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 col-xs-12 col-xl-12">
+            <nb-card>
+                <nb-card-header>Consolidado de Facturacion</nb-card-header>
+                <nb-card-body>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-4">
+                                <input [nbDatepicker]="datepicker" nbInput fullWidth fieldSize="medium" placeholder="Desde">
+                                <nb-datepicker #datepicker></nb-datepicker>
+                            </div>
+                            <div class="col-4">
+                                 <input [nbDatepicker]="datepicker2" nbInput fullWidth fieldSize="medium" placeholder="Hasta">
+                                <nb-datepicker #datepicker2></nb-datepicker>
+                            </div>                                          
+                            <div class="col-4">
+                                <button nbButton status="success" size="small">Generar Consolidado</button>
+                            </div>
+                        </div>
+                    </div>
+                </nb-card-body>
+            </nb-card>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 col-xs-12 col-xl-12">
+            <nb-card>
+                <nb-card-header>Ultimos 30 días</nb-card-header>
+                <nb-card-body>
+                    <ng2-smart-table [settings]="settings" [source]="data"></ng2-smart-table>
+                </nb-card-body>
+                <nb-card-footer><button nbButton status="success" size="xsmall">Exportar para facturación</button></nb-card-footer>
+            </nb-card>
+        </div>
+    </div>
+</div>
